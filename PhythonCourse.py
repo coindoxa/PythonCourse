@@ -1781,7 +1781,7 @@ return word_lengths
 # total = apple.count('one')
 # print(total)
 
-### Unique Values
+### 8 Unique Values
 """Create a function named unique_values that takes a dictionary named my_dictionary as a parameter. 
 The function should return the number of unique values in the dictionary."""
 
@@ -1966,15 +1966,36 @@ The function should return a dictionary of key/value pairs where every key is a 
 The function should return the number of unique values in the dictionary."""
 
 
-def unique_values(my_dictionary):
-    seen_values = []
-    for value in my_dictionary.values():
-        if value not in seen_values:
-            seen_values.append(value)
-    return len(seen_values)
+# def unique_values(my_dictionary):
+#     seen_values = []
+#     for value in my_dictionary.values():
+#         if value not in seen_values:
+#             seen_values.append(value)
+#     return len(seen_values)
+#
+#
+# print(unique_values({0:3, 1:1, 4:1, 5:3}))
+# # should print 2
+# print(unique_values({0:3, 1:3, 4:3, 5:3}))
+# # should print 1
 
+### 9
+"""Create a function named count_first_letter that takes a dictionary named names as a parameter. names should be a
+ dictionary where the key is a last name and the value is a list of first names. For example, the dictionary might look like this:"""
 
-print(unique_values({0:3, 1:1, 4:1, 5:3}))
-# should print 2
-print(unique_values({0:3, 1:3, 4:3, 5:3}))
-# should print 1
+### my version
+# def count_first_letter(names):
+#     letters = {}
+#     for key in names.keys():
+#         if key[0] not in letters:
+#             letters[key[0]] = len(names[key])
+#     if key[0] in letters:
+#         letters[key[0]] += len(names[key])
+#
+#     return letters
+#
+#
+# print(count_first_letter({"Stark": ["Ned", "Robb", "Sansa"], "Snow" : ["Jon"], "Lannister": ["Jaime", "Cersei", "Tywin"]}))
+# # should print {"S": 4, "L": 3}
+# print(count_first_letter({"Stark": ["Ned", "Robb", "Sansa"], "Snow" : ["Jon"], "Sannister": ["Jaime", "Cersei", "Tywin"]}))
+# # should print {"S": 7}
