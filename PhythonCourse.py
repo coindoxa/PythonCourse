@@ -2,7 +2,7 @@ import subprocess
 import os
 import re
 ##from __future__ import with_statement
-from grizzled.os import working_directory
+#from grizzled.os import working_directory
 
 # one = 3 ** 2 + 1 != 30 / 3
 #
@@ -1664,7 +1664,7 @@ The function should add 10 to every value in my_dictionary and return my_diction
 # should print {10:11, 100:12, 1000:13}
 
 
-### Values That Are Keys
+### 5 Values That Are Keys
 
 """Write a function named max_key that takes a dictionary named my_dictionary as a parameter. 
 The function should return the key associated with the largest value in the dictionary."""
@@ -1712,7 +1712,7 @@ The function should return the key associated with the largest value in the dict
 #
 # print(max_key({1:100, 2:1, 3:4, 4:10}))
 
-### Word Length Dict
+### 6 Word Length Dict
 
 """Write a function named word_length_dictionary that takes a list of strings named words as a parameter. 
 The function should return a dictionary of key/value pairs where every key is a word in words and every value is the length of that word."""
@@ -1759,7 +1759,7 @@ return word_lengths
 # print(word_length_dictionary(["a", ""]))
 # # should print {"a": 1, "": 0}
 
-
+### 7
 """Write a function named frequency_dictionary that takes a list of elements named words as a parameter.
  The function should return a dictionary containing the frequency of each element in words."""
 
@@ -1915,19 +1915,66 @@ This function should return a list of all values in the dictionary that are also
 """Write a function named max_key that takes a dictionary named my_dictionary as a parameter.
  The function should return the key associated with the largest value in the dictionary."""
 
-def max_key(my_dictionary):
-    larg_val = 0
+# def max_key(my_dictionary):
+#     larg_val = []
+#     for keys, values in my_dictionary.items():
+#         larg_val.append(values)
+#         max_val = max(larg_val)
+#     for keys, values in my_dictionary.items():
+#         if values == max_val:
+#             return keys
+#
+#
+# print(max_key({1: 100, 2: 1, 3: 4, 4: 10}))
+# # should print 1
+# print(max_key({"a": 100, "b": 10, "c": 1000}))
+# # should print "c"
+
+### 6 Word Length Dict
+
+"""Write a function named word_length_dictionary that takes a list of strings named words as a parameter. 
+The function should return a dictionary of key/value pairs where every key is a word in words and every value is the length of that word."""
+
+# def word_length_dictionary(words):
+#     return {word: len(word) for word in words}
+#
+# print(word_length_dictionary(["apple", "dog", "cat"]))
+# # should print {"apple":5, "dog": 3, "cat":3}
+# print(word_length_dictionary(["a", ""]))
+# # should print {"a": 1, "": 0}
+
+### 7
+"""Write a function named frequency_dictionary that takes a list of elements named words as a parameter.
+ The function should return a dictionary containing the frequency of each element in words."""
 
 
+# def frequency_dictionary(words):
+#     return {word: words.count(word) for word in words}
+#     # dict = {} # longer solution
+#     # for word in words:
+#     #     dict[word] = words.count(word)
+#     # return dict
+#
+#
+# print(frequency_dictionary(["apple", "apple", "cat", 1]))
+# # should print {"apple":2, "cat":1, 1:1}
+# print(frequency_dictionary([0,0,0,0,0]))
+# # should print {0:5}
+
+### 8 Unique Values
+"""Create a function named unique_values that takes a dictionary named my_dictionary as a parameter. 
+The function should return the number of unique values in the dictionary."""
 
 
-print(max_key({1: 100, 2: 1, 3: 4, 4: 10}))
+def unique_values(my_dictionary):
+    seen_values = []
+    for value in my_dictionary.values():
+        if value not in seen_values:
+            seen_values.append(value)
+    return len(seen_values)
+
+
+print(unique_values({0:3, 1:1, 4:1, 5:3}))
+# should print 2
+print(unique_values({0:3, 1:3, 4:3, 5:3}))
 # should print 1
-print(max_key({"a": 100, "b": 10, "c": 1000}))
-# should print "c"
-
-print('Hello World')
-
-
-
-#### Hello from Git
