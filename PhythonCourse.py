@@ -1,6 +1,7 @@
 import subprocess
 import os
 import re
+import csv
 ##from __future__ import with_statement
 #from grizzled.os import working_directory
 
@@ -1999,3 +2000,49 @@ The function should return the number of unique values in the dictionary."""
 # # should print {"S": 4, "L": 3}
 # print(count_first_letter({"Stark": ["Ned", "Robb", "Sansa"], "Snow" : ["Jon"], "Sannister": ["Jaime", "Cersei", "Tywin"]}))
 # # should print {"S": 7}
+
+
+################## OPEN FILE ##################OPEN FILE ##################OPEN FILE ##################
+
+# with open('real_cool_document.txt') as cool_doc:
+#   cool_contents = cool_doc.read()
+# print(cool_contents)
+
+### Print line by line
+# with open('how_many_lines.txt') as lines_doc:
+#   for line in lines_doc.readlines():
+#     print(line)
+
+### Line by line methong
+
+# with open('millay_sonnet.txt') as sonnet_doc:
+#   first_line = sonnet_doc.readline()
+#   second_line = sonnet_doc.readline()
+#   print(second_line)
+
+### Writing a File
+
+# with open('generated_file.txt', 'w') as gen_file:
+#   gen_file.write("What an incredible file!")
+
+### Append file
+
+# with open('generated_file.txt', 'a') as gen_file:
+#   gen_file.write("... and it still is")
+
+# with open('cool_dogs.txt', 'a') as cool_dogs_file:
+#   cool_dogs_file.write('Air Buddy')
+
+#### CSV Files
+
+# with open('logger.csv') as log_csv_file:
+#   file = log_csv_file.read()
+#   print(file)
+
+# import csv
+#
+# list_of_email_addresses = []
+# with open('users.csv', newline='') as users_csv:
+#   user_reader = csv.DictReader(users_csv)
+#   for row in user_reader:
+#     list_of_email_addresses.append(row['Email'])
