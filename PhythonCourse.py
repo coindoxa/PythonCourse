@@ -2046,3 +2046,90 @@ The function should return the number of unique values in the dictionary."""
 #   user_reader = csv.DictReader(users_csv)
 #   for row in user_reader:
 #     list_of_email_addresses.append(row['Email'])
+
+
+# import csv
+#
+# with open('cool_csv.csv') as cool_csv_file:
+#   cool_csv_dict = csv.DictReader(cool_csv_file)
+#   for row in cool_csv_dict:
+#     print(row['Cool Fact'])
+
+
+# with open('addresses.csv', newline='') as addresses_csv:
+#   address_reader = csv.DictReader(addresses_csv, delimiter=';')
+#   for row in address_reader:
+#     print(row['Address'])
+
+
+# isbn_list = []
+# with open('books.csv') as books_csv:
+#   books_reader = csv.DictReader(books_csv, delimiter ='@')
+#   for row in books_reader:
+#     isbn_list.append(row['ISBN'])
+# return isbn_list
+
+
+# big_list = [{'name': 'Fredrick Stein', 'userid': 6712359021, 'is_admin': False}, {'name': 'Wiltmore Denis', 'userid': 2525942, 'is_admin': False}, {'name': 'Greely Plonk', 'userid': 15890235, 'is_admin': False}, {'name': 'Dendris Stulo', 'userid': 572189563, 'is_admin': True}]
+#
+# import csv
+#
+# with open('output.csv', 'w') as output_csv:
+#   fields = ['name', 'userid', 'is_admin']
+#   output_writer = csv.DictWriter(output_csv, fieldnames=fields)
+#
+#   output_writer.writeheader()
+#   for item in big_list:
+#     output_writer.writerow(item)
+
+
+# with open('logger.csv', 'w') as logger_csv:
+#   log_writer = csv.DictWriter(logger_csv, fieldnames=fields)
+#   log_writer.writeheader()
+#   for line in access_log:
+#     log_writer.writerow(line)
+
+
+### Read JSON file
+
+# import json
+# #
+# # with open('purchase_14781239.json') as purchase_json:
+# #   purchase_data = json.load(purchase_json)
+# #
+# # print(purchase_data['user'])
+# # # Prints 'ellen_greg'
+
+
+
+# with open('output.json', 'w') as json_file:
+#   json.dump(turn_to_json, json_file)
+
+
+# with open('data.json', 'w') as data_json:
+#   json.dump(data_payload, data_json)
+
+
+######## Project #######
+
+import csv
+import json
+
+compromised_users = []
+password_row = []
+with open('passwords.csv') as password_file:
+    password_csv = csv.DictReader(password_file)
+    for row in password_csv:
+        password_row.append(row)
+        compromised_users.append(row['Username'])
+        # print(compromised_users)
+with open('compromised_users.txt', 'w') as compromised_user_file:
+    for user in compromised_users:
+        compromised_user_file.write(user)
+with open('boss_message.json', 'w') as boss_message:
+    boss_message_dict =
+    {"recipient": "Teh Boss",
+     "message", "Mission Success"
+    }
+    json.dump(boss_message_dict, boss_message)
+
