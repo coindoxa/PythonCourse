@@ -2112,24 +2112,83 @@ The function should return the number of unique values in the dictionary."""
 
 ######## Project #######
 
-import csv
-import json
+# import csv
+# import json
+#
+# compromised_users = []
+# password_row = []
+# with open('passwords.csv') as password_file:
+#   password_csv = csv.DictReader(password_file)
+#   for row in password_csv:
+#     password_row.append(row)
+#     compromised_users.append(row['Username'])
+#     #print(compromised_users)
+# with open('compromised_users.txt', 'w') as compromised_user_file:
+#   for user in compromised_users:
+#     compromised_user_file.write(user)
+# with open('boss_message.json', 'w') as boss_message:
+#   boss_message_dict = {"recipient": "Teh Boss",
+#    "message": "Mission Success"}
+#   json.dump(boss_message_dict, boss_message)
+# slash_null_sig =
+# """
+#  _  _     ___   __  ____
+# / )( \   / __) /  \(_  _)
+# ) \/ (  ( (_ \(  O ) )(
+# \____/   \___/ \__/ (__)
+#  _  _   __    ___  __ _  ____  ____
+# / )( \ / _\  / __)(  / )(  __)(    \
+# ) __ (/    \( (__  )  (  ) _)  ) D (
+# \_)(_/\_/\_/ \___)(__\_)(____)(____/
+#         ____  __     __   ____  _  _
+#  ___   / ___)(  )   / _\ / ___)/ )( \
+# (___)  \___ \/ (_/\/    \\___ \) __ (
+#        (____/\____/\_/\_/(____/\_)(_/
+#  __ _  _  _  __    __
+# (  ( \/ )( \(  )  (  )
+# /    /) \/ (/ (_/\/ (_/\
+# \_)__)\____/\____/\____/
+#"""
 
-compromised_users = []
-password_row = []
-with open('passwords.csv') as password_file:
-    password_csv = csv.DictReader(password_file)
-    for row in password_csv:
-        password_row.append(row)
-        compromised_users.append(row['Username'])
-        # print(compromised_users)
-with open('compromised_users.txt', 'w') as compromised_user_file:
-    for user in compromised_users:
-        compromised_user_file.write(user)
-with open('boss_message.json', 'w') as boss_message:
-    boss_message_dict =
-    {"recipient": "Teh Boss",
-     "message", "Mission Success"
-    }
-    json.dump(boss_message_dict, boss_message)
 
+### Types
+
+# a_string = "Cool String"
+# an_int = 12
+#
+# print(type(a_string))
+# # prints "<class 'str'>"
+# print(type(an_int))
+#
+# num = 5
+# print(type(num))
+# my_dict = {}
+# print(type(my_dict))
+# my_list = []
+# print(type(my_list))
+
+####### Classes
+
+
+# class DistanceConverter:
+#   kms_in_a_mile = 1.609
+#   def how_many_kms(self, miles):
+#     return miles * self.kms_in_a_mile
+#
+# converter = DistanceConverter()
+# kms_in_5_miles = converter.how_many_kms(5)
+# print(kms_in_5_miles)
+# prints "8.045"
+
+
+class Circle:
+    pi = 3.14
+
+    def area(self, radius):
+        return Circle.pi * radius ** 2
+
+
+circle = Circle()
+pizza_area = circle.area(12 / 2)
+teaching_table_area = circle.area(36 / 2)
+round_room_area = circle.area(11460 / 2)
