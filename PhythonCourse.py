@@ -2181,14 +2181,102 @@ The function should return the number of unique values in the dictionary."""
 # prints "8.045"
 
 
+# class Circle:
+#     pi = 3.14
+#
+#     def area(self, radius):
+#         return Circle.pi * radius ** 2
+#
+#
+# circle = Circle()
+# pizza_area = circle.area(12 / 2)
+# teaching_table_area = circle.area(36 / 2)
+# round_room_area = circle.area(11460 / 2)
+
+# class Circle:
+#     pi = 3.14
+#     # Add constructor here:
+#     def __init__(self, diameter):
+#         print("New circle with diameter: {diameter}".format(diameter=diameter))
+# teaching_table = Circle(36)
+# class FakeDict:
+#   pass
+# fake_dict1 = FakeDict()
+# fake_dict2 = FakeDict()
+#
+# fake_dict1.fake_key = "This works!"
+# fake_dict2.fake_key = "This too!"
+#
+# # Let's join the two strings together!
+# working_string = "{} {}".format(fake_dict1.fake_key, fake_dict2.fake_key)
+# print(working_string)
+# # prints "This works! This too!"
+#
+#
+# class Store:
+#   pass
+# alternative_rocks = Store()
+# isabelles_ices = Store()
+# alternative_rocks.store_name = "Alternative Rocks"
+# isabelles_ices.store_name = "Isabelle's Ices"
+
+
+
+# how_many_s = [{'s': False}, "sassafrass", 18, ["a", "c", "s", "d", "s"]]
+# for element in how_many_s:
+#     if hasattr(element, "count"):
+#         print(element.count('s'))
+
+
+# class SearchEngineEntry:
+#   def __init__(self, url):
+#     self.url = url
+#
+# codecademy = SearchEngineEntry("www.codecademy.com")
+# wikipedia = SearchEngineEntry("www.wikipedia.org")
+#
+# print(codecademy.url)
+# # prints "www.codecademy.com"
+#
+# print(wikipedia.url)
+# # prints "www.wikipedia.org"
+#
+#
+#
+# class SearchEngineEntry:
+#   secure_prefix = "https://"
+#   def __init__(self, url):
+#     self.url = url
+#
+#   def secure(self):
+#     return "{prefix}{site}".format(prefix=self.secure_prefix, site=self.url)
+#
+# codecademy = SearchEngineEntry("www.codecademy.com")
+#
+# print(codecademy.secure())
+# # prints "https://www.codecademy.com"
+#
+# print(wikipedia.secure())
+# # prints "https://www.wikipedia.org"
+
+
 class Circle:
     pi = 3.14
 
-    def area(self, radius):
-        return Circle.pi * radius ** 2
+    def __init__(self, diameter):
+        print("Creating circle with diameter {d}".format(d=diameter))
+        # Add assignment for self.radius here:
+
+        self.radius = diameter / 2
+
+    def circumference(self):
+        return 2 * self.pi * self.radius
 
 
-circle = Circle()
-pizza_area = circle.area(12 / 2)
-teaching_table_area = circle.area(36 / 2)
-round_room_area = circle.area(11460 / 2)
+medium_pizza = Circle(12)
+teaching_table = Circle(36)
+round_room = Circle(11460)
+
+print(medium_pizza.circumference())
+print(teaching_table.circumference())
+print(round_room.circumference())
