@@ -2260,23 +2260,65 @@ The function should return the number of unique values in the dictionary."""
 # # prints "https://www.wikipedia.org"
 
 
-class Circle:
-    pi = 3.14
+# class Circle:
+#     pi = 3.14
+#
+#     def __init__(self, diameter):
+#         print("Creating circle with diameter {d}".format(d=diameter))
+#         # Add assignment for self.radius here:
+#
+#         self.radius = diameter / 2
+#
+#     def circumference(self):
+#         return 2 * self.pi * self.radius
+#
+#
+# medium_pizza = Circle(12)
+# teaching_table = Circle(36)
+# round_room = Circle(11460)
+#
+# print(medium_pizza.circumference())
+# print(teaching_table.circumference())
+# print(round_room.circumference())
 
-    def __init__(self, diameter):
-        print("Creating circle with diameter {d}".format(d=diameter))
-        # Add assignment for self.radius here:
 
-        self.radius = diameter / 2
+# class FakeDict:
+#   pass
+#
+# fake_dict = FakeDict()
+# fake_dict.attribute = "Cool"
+#
+# print(dir(fake_dict))
+# Prints ['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'attribute']
 
-    def circumference(self):
-        return 2 * self.pi * self.radius
+# print(dir(5))
+#
+# def this_function_is_an_object(num):
+#   return "Cheese is {} times better than everything else".format(num)
+#
+# print(dir(this_function_is_an_object))
 
 
-medium_pizza = Circle(12)
-teaching_table = Circle(36)
-round_room = Circle(11460)
-
-print(medium_pizza.circumference())
-print(teaching_table.circumference())
-print(round_room.circumference())
+# class Circle:
+#     pi = 3.14
+#
+#     def __init__(self, diameter):
+#         self.radius = diameter / 2
+#
+#     def area(self):
+#         return self.pi * self.radius ** 2
+#
+#     def circumference(self):
+#         return self.pi * 2 * self.radius
+#
+#     def __repr__(self):
+#         return "Circle with radius {radius}".format(radius=self.radius)
+#
+#
+# medium_pizza = Circle(12)
+# teaching_table = Circle(36)
+# round_room = Circle(11460)
+#
+# print(medium_pizza)
+# print(teaching_table)
+# print(round_room)
